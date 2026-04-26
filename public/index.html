@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Management & Route Optimization</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Traffic Management System</h1>
+            <p>Shortest Route Optimization using Dijkstra's Algorithm</p>
+        </header>
+
+        <main>
+            <div class="panel controls">
+                <h2>Route Planner</h2>
+                <div class="form-group">
+                    <label for="startNode">Start Location</label>
+                    <select id="startNode">
+                        <option value="CityCenter">City Center</option>
+                        <option value="SuburbNorth">Suburb North</option>
+                        <option value="SuburbSouth">Suburb South</option>
+                        <option value="Airport">Airport</option>
+                        <option value="TechPark">Tech Park</option>
+                        <option value="Mall">Mall</option>
+                        <option value="Hospital">Hospital</option>
+                        <option value="University">University</option>
+                        <option value="IndustrialZone">Industrial Zone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="endNode">Destination</label>
+                    <select id="endNode">
+                        <option value="Airport" selected>Airport</option>
+                        <option value="CityCenter">City Center</option>
+                        <option value="SuburbNorth">Suburb North</option>
+                        <option value="SuburbSouth">Suburb South</option>
+                        <option value="TechPark">Tech Park</option>
+                        <option value="Mall">Mall</option>
+                        <option value="Hospital">Hospital</option>
+                        <option value="University">University</option>
+                        <option value="IndustrialZone">Industrial Zone</option>
+                    </select>
+                </div>
+
+                <div class="traffic-simulator">
+                    <h3>Traffic Simulator</h3>
+                    <p>Add traffic congestion to see alternative routes.</p>
+                    <div id="trafficRules"></div>
+                    
+                    <div class="add-traffic-group">
+                        <select id="trafficU"></select>
+                        <span>to</span>
+                        <select id="trafficV"></select>
+                        <select id="trafficPenalty">
+                            <option value="2">Moderate Traffic (2x)</option>
+                            <option value="3">Heavy Traffic (3x)</option>
+                            <option value="5">Severe Traffic Jam (5x)</option>
+                        </select>
+                        <button id="addTrafficBtn" class="secondary-btn">+ Add</button>
+                    </div>
+                </div>
+
+                <button id="findRouteBtn" class="primary-btn">Find Shortest Route</button>
+            </div>
+
+            <div class="panel results">
+                <h2>Route Result</h2>
+                <div id="loading" class="hidden">Calculating route...</div>
+                <div id="errorBox" class="hidden error"></div>
+                <div id="resultBox" class="hidden">
+                    <div class="summary">
+                        <div class="metric">
+                            <span class="label">Total Cost (Time)</span>
+                            <span id="totalCost" class="value">0</span>
+                        </div>
+                    </div>
+                    <h3>Optimal Path</h3>
+                    <div id="pathVisualizer" class="path-visualizer">
+                        <!-- Path nodes will be injected here -->
+                    </div>
+                </div>
+                <div class="map-illustration">
+                    <h3>City Map Reference</h3>
+                    <div class="map-placeholder">
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="City Map" style="width:100%; border-radius: 8px; opacity: 0.8;">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
