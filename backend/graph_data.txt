@@ -1,0 +1,23 @@
+9 12
+CityCenter
+SuburbNorth
+SuburbSouth
+Airport
+TechPark
+Mall
+Hospital
+University
+IndustrialZone
+CityCenter SuburbNorth 5
+CityCenter SuburbSouth 4
+CityCenter TechPark 10
+SuburbNorth Airport 8
+SuburbSouth Airport 12
+SuburbNorth TechPark 6
+TechPark Mall 3
+Airport Mall 7
+Hospital University 4
+CityCenter Hospital 2
+University TechPark 5
+SuburbSouth IndustrialZone 6
+IndustrialZone Airport 9
