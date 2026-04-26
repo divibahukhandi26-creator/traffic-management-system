@@ -1,0 +1,17 @@
+{
+  "name": "traffic-management-system",
+  "version": "1.0.0",
+  "description": "Traffic Management System Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "path": "^0.12.7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
